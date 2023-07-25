@@ -1,3 +1,4 @@
+import { createUserWithEmailAndPassword, getAuth } from "@firebase/auth";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "src/shared/Input";
@@ -28,7 +29,12 @@ const Register = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<RegisterData> = (data) => {};
+  const onSubmit: SubmitHandler<RegisterData> = (data) => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, data.email, data.password).then(
+      console.log
+    );
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
