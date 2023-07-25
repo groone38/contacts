@@ -43,7 +43,10 @@
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/compose-function": "^0.0.30",
     "axios": "^1.4.0",
+    "compose-function": "^3.0.3",
+    "react-compose": "^2.0.0",
     "react-hook-form": "^7.45.2",
     "react-redux": "^8.1.1",
     "redux": "^4.2.1",
