@@ -1,9 +1,7 @@
 import React from "react";
 import classes from "./Button.module.scss";
 
-type Props = {};
-
-const Button = (props: Props) => {
+const Button = () => {
   return <div>Button</div>;
 };
 
