@@ -1,9 +1,20 @@
 import { lazy } from "react";
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { PrivateRoute } from "src/app/providers";
+import { Layout } from "./Layout";
 
 const Login = lazy(() => import("./Login"));
 const Home = lazy(() => import("./Home"));
 
 export const Routing = () => {
-  return <Routes>{/* <Route element={<}></Route> */}</Routes>;
+  return (
+    <Routes>
+      <Route element={<PrivateRoute />}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Route>
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  );
 };
