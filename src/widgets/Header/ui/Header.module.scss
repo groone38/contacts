@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+}
+
+.nav {
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      padding: 20px;
+      transition: all 0.5s;
+      list-style-type: none;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: var(--bg-primary-color);
+      }
+    }
+  }
+}

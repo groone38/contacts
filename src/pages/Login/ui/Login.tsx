@@ -1,4 +1,6 @@
 import React from "react";
+import { initializeApp } from "firebase/app";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "src/shared/Input";
 
@@ -21,6 +23,10 @@ const Login = () => {
   });
 
   const onSubmit: SubmitHandler<LoginData> = (data) => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, data.email, data.password).then(
+      console.log
+    );
     console.log(data);
   };
 
