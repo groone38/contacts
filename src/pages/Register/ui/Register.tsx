@@ -1,6 +1,9 @@
 import { createUserWithEmailAndPassword, getAuth } from "@firebase/auth";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "src/app/providers/store";
+import { registerUser } from "src/features/model/reducers/AuthSlice";
 import { Input } from "src/shared/Input";
 
 interface RegisterData {
@@ -29,40 +32,42 @@ const Register = () => {
     },
   });
 
+  const dispatch = useAppDispatch();
+  const loading = useAppSelector((state) => state.auth.loading);
+  const navigate = useNavigate();
   const onSubmit: SubmitHandler<RegisterData> = (data) => {
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, data.email, data.password).then(
-      console.log
-    );
+    dispatch(registerUser(data)).then(() => navigate("/login"));
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <Input
-          id="email"
-          name="email"
-          placeholder="Enter you email"
-          register={register}
-          required="Поле Email не может быть пустым!"
-          type="email"
-          label="Email"
-        />
-        {errors && <span>{errors?.email?.message}</span>}
-      </div>
-      <div>
-        <Input
-          id="password"
-          name="password"
-          placeholder="Enter you password"
-          register={register}
-          required="Поле Password не может быть пустым!"
-          type="password"
-          label="Password"
-        />
-        {errors && <span>{errors?.password?.message}</span>}
-      </div>
-      <div>
+    <>
+      {loading && <h1>Loading...</h1>}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <Input
+            id="email"
+            name="email"
+            placeholder="Enter you email"
+            register={register}
+            required="Поле Email не может быть пустым!"
+            type="email"
+            label="Email"
+          />
+          {errors && <span>{errors?.email?.message}</span>}
+        </div>
+        <div>
+          <Input
+            id="password"
+            name="password"
+            placeholder="Enter you password"
+            register={register}
+            required="Поле Password не может быть пустым!"
+            type="password"
+            label="Password"
+          />
+          {errors && <span>{errors?.password?.message}</span>}
+        </div>
+        {/* <div>
         <Input
           id="confirmPassword"
           name="confirmPassword"
@@ -109,9 +114,10 @@ const Register = () => {
           label="Tel"
         />
         {errors && <span>{errors?.tel?.message}</span>}
-      </div>
-      <button type="submit">Sing in</button>
-    </form>
+      </div> */}
+        <button type="submit">Sing up</button>
+      </form>
+    </>
   );
 };
 
