@@ -1,3 +1,3 @@
-import { auth } from "./model/reducers/AuthSlice";
+import { auth, contacts } from "./model";
 
-export { auth };
+export { auth, contacts };

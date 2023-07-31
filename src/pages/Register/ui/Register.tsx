@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, getAuth } from "@firebase/auth";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { registerUser } from "src/features/model/reducers/AuthSlice";
 import { Input } from "src/shared/Input";
@@ -116,6 +116,7 @@ const Register = () => {
         {errors && <span>{errors?.tel?.message}</span>}
       </div> */}
         <button type="submit">Sing up</button>
+        <Link to="/login">Sing in</Link>
       </form>
     </>
   );

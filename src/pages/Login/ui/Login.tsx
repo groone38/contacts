@@ -5,7 +5,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "src/shared/Input";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { signInUser } from "src/features/model/reducers/AuthSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface LoginData {
   email: string;
@@ -60,6 +60,7 @@ const Login = () => {
           {errors && <span>{errors?.password?.message}</span>}
         </div>
         <button type="submit">Sing in</button>
+        <Link to="/register">Sing Up</Link>
       </form>
     </>
   );

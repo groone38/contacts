@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Header.module.scss";
+import { useNavigate } from "react-router-dom";
+import { Modal } from "src/widgets/Modal";
 
 const Header = () => {
+  const [show, setShow] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const singOut = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
@@ -9,11 +18,12 @@ const Header = () => {
       </div>
       <nav className={classes.nav}>
         <ul>
-          <li>Create new contact</li>
+          <li onClick={() => setShow(true)}>Create new contact</li>
           <li>About</li>
-          <li>Exit</li>
+          <li onClick={singOut}>Exit</li>
         </ul>
       </nav>
+      <Modal show={show} setShow={setShow} />
     </header>
   );
 };

@@ -34,6 +34,7 @@ export const signInUser = createAsyncThunk(
   async (data: Data, thunkAPI) => {
     try {
       const auth = getAuth();
+      console.log(auth);
       const response: User = await signInWithEmailAndPassword(
         auth,
         data.email,

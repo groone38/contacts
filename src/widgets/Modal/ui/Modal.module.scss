@@ -1,0 +1,44 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .close_btn {
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    padding: 5px;
+    border: 1px solid var(--bg-primary-color);
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    transition: ease-in-out 0.5s;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid white;
+    }
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
