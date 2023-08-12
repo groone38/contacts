@@ -1,8 +1,16 @@
 import React from "react";
 import classes from "./Button.module.scss";
+export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
+  children: JSX.Element;
+  onclick: React.MouseEventHandler<HTMLButtonElement>;
+}
 
-const Button = () => {
-  return <div>Button</div>;
+const Button = ({ children, onclick, type }: ButtonProps) => {
+  return (
+    <button type={type} onClick={onclick} className={classes.btn}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

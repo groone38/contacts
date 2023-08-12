@@ -19,7 +19,7 @@ const Modal = ({ show, setShow }: ModalProps) => {
       <button onClick={() => setShow(false)} className={classes.close_btn}>
         <img src={Close} alt="close" />
       </button>
-      <ModalForm />
+      <ModalForm setShow={setShow} />
     </div>,
     root
   );

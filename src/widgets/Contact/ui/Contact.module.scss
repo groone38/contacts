@@ -1,0 +1,15 @@
+.contact {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid var(--bg-primary-color);
+  border-radius: 20px;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+  color: var(--bg-primary-color);
+  &:hover {
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    transform: translate(-10px, 10px);
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+}

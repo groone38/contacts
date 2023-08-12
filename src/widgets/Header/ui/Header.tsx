@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Header.module.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Modal } from "src/widgets/Modal";
 
 const Header = () => {
@@ -14,7 +14,9 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <h3>LOGO</h3>
+        <Link to={"/"}>
+          <h3>LOGO</h3>
+        </Link>
       </div>
       <nav className={classes.nav}>
         <ul>

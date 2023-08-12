@@ -2,10 +2,11 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import classes from "./ModalForm.module.scss";
 import { Input } from "src/shared/Input";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "src/app/providers";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
-import { createContact } from "src/features/model/reducers/ContactsSlice";
+import {
+  createContact,
+  getContact,
+} from "src/features/model/reducers/ContactsSlice";
 
 interface ModalFormData {
   email: string;
@@ -16,7 +17,11 @@ interface ModalFormData {
   about: string;
 }
 
-const ModalForm = () => {
+interface ModalFormProps {
+  setShow: (e: boolean) => void;
+}
+
+const ModalForm = ({ setShow }: ModalFormProps) => {
   const {
     register,
     handleSubmit,
@@ -38,7 +43,8 @@ const ModalForm = () => {
 
   const onSubmit: SubmitHandler<ModalFormData> = async (data) => {
     dispatch(createContact(data));
-    // const res = await addDoc(collection(db, "contacts"), data);
+    dispatch(getContact());
+    setShow(false);
   };
 
   return (

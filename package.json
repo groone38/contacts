@@ -49,6 +49,7 @@
     "compose-function": "^3.0.3",
     "react-compose": "^2.0.0",
     "react-hook-form": "^7.45.2",
+    "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "redux": "^4.2.1",
     "sass": "^1.64.1"

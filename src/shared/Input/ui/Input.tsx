@@ -8,6 +8,7 @@ interface InputProps {
   register: any;
   required: string;
   label: string;
+  errors: string | undefined;
 }
 
 const Input = ({
@@ -18,9 +19,10 @@ const Input = ({
   register,
   required,
   label,
+  errors,
 }: InputProps) => {
   return (
-    <>
+    <div>
       <label htmlFor={id}>{label}: </label>
       <input
         type={type}
@@ -30,7 +32,8 @@ const Input = ({
           required: required,
         })}
       />
-    </>
+      {errors && <span>{errors}</span>}
+    </div>
   );
 };
 
