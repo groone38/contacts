@@ -6,9 +6,9 @@ import {
   doc,
   getDoc,
   getDocs,
+  updateDoc,
 } from "firebase/firestore";
 import { db } from "src/app/providers";
-import { useAppDispatch } from "src/app/providers/store";
 
 export interface Data {
   first_name: string;
@@ -18,6 +18,18 @@ export interface Data {
   company: string;
   about: string;
   id?: string;
+}
+
+interface UpdateData {
+  id: string | undefined;
+  newData: {
+    first_name: string;
+    last_name: string;
+    email: string;
+    tel: null | number;
+    company: string;
+    about: string;
+  };
 }
 
 interface State {
@@ -48,7 +60,6 @@ export const createContact = createAsyncThunk(
 export const getContact = createAsyncThunk(
   "contacts/getContacts",
   async (_, thunkAPI) => {
-    console.log("getContact");
     try {
       const contacts = await getDocs(collection(db, "contacts"));
       const data: Data[] = [];
@@ -77,8 +88,11 @@ export const getOneContact = createAsyncThunk(
 
 export const updateContact = createAsyncThunk(
   "contacts/updateContact",
-  async (data: any, thunkAPI) => {
+  async (data: UpdateData, thunkAPI) => {
     try {
+      const docRef = doc(db, "contacts", `${data.id}`);
+      await updateDoc(docRef, data.newData);
+      return;
     } catch (error) {
       return thunkAPI.rejectWithValue("Error update contact!");
     }

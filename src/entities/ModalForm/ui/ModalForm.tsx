@@ -7,6 +7,7 @@ import {
   createContact,
   getContact,
 } from "src/features/model/reducers/ContactsSlice";
+import { Loader } from "src/shared/ui/Loader";
 
 interface ModalFormData {
   email: string;
@@ -49,7 +50,7 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
 
   return (
     <>
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loader />}
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <div>
           <Input
@@ -60,8 +61,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле Email не может быть пустым!"
             type="email"
             label="Email"
+            errors={errors?.email?.message}
           />
-          {errors && <span>{errors?.email?.message}</span>}
         </div>
         <div>
           <Input
@@ -72,8 +73,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле First name не может быть пустым!"
             type="text"
             label="First name"
+            errors={errors?.first_name?.message}
           />
-          {errors && <span>{errors?.first_name?.message}</span>}
         </div>
         <div>
           <Input
@@ -84,8 +85,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле Last name не может быть пустым!"
             type="text"
             label="Last name"
+            errors={errors?.last_name?.message}
           />
-          {errors && <span>{errors?.last_name?.message}</span>}
         </div>
         <div>
           <Input
@@ -96,8 +97,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле Tel не может быть пустым!"
             type="number"
             label="Tel"
+            errors={errors?.tel?.message}
           />
-          {errors && <span>{errors?.tel?.message}</span>}
         </div>
         <div>
           <Input
@@ -108,8 +109,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле Company не может быть пустым!"
             type="text"
             label="Company"
+            errors={errors?.company?.message}
           />
-          {errors && <span>{errors?.company?.message}</span>}
         </div>
         <div>
           <Input
@@ -120,8 +121,8 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
             required="Поле About не может быть пустым!"
             type="text"
             label="About"
+            errors={errors?.about?.message}
           />
-          {errors && <span>{errors?.about?.message}</span>}
         </div>
         <button type="submit">Create contact</button>
       </form>

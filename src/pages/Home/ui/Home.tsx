@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { getContact } from "src/features/model/reducers/ContactsSlice";
-import Contact from "src/widgets/Contact/ui/Contact";
+import Contact from "src/entities/Contact/ui/Contact";
 import classes from "./Home.module.scss";
+import { Loader } from "src/shared/ui/Loader";
 
 const Home = () => {
   const contact = useAppSelector((state) => state.contacts.contacts);
@@ -15,7 +16,7 @@ const Home = () => {
 
   return (
     <div className={classes.home}>
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loader />}
       <div className={classes.contacts}>
         {contact.map((item) => (
           <Contact key={item.id} id={item.id!} name={item.first_name} />

@@ -6,6 +6,7 @@ import { Input } from "src/shared/Input";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { signInUser } from "src/features/model/reducers/AuthSlice";
 import { Link, useNavigate } from "react-router-dom";
+import { Loader } from "src/shared/ui/Loader";
 
 interface LoginData {
   email: string;
@@ -33,7 +34,7 @@ const Login = () => {
 
   return (
     <>
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loader />}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <Input
@@ -44,8 +45,8 @@ const Login = () => {
             required="Поле Email не может быть пустым!"
             type="email"
             label="Email"
+            errors={errors?.email?.message}
           />
-          {errors && <span>{errors?.email?.message}</span>}
         </div>
         <div>
           <Input
@@ -56,8 +57,8 @@ const Login = () => {
             required="Поле Password не может быть пустым!"
             type="password"
             label="Password"
+            errors={errors?.password?.message}
           />
-          {errors && <span>{errors?.password?.message}</span>}
         </div>
         <button type="submit">Sing in</button>
         <Link to="/register">Sing Up</Link>
