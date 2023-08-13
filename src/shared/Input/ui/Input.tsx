@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./Input.module.scss";
 interface InputProps {
   type: string;
   id: string;
@@ -22,7 +22,7 @@ const Input = ({
   errors,
 }: InputProps) => {
   return (
-    <div>
+    <div className={classes.input}>
       <label htmlFor={id}>{label}: </label>
       <input
         type={type}

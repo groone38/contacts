@@ -1,0 +1,5 @@
+@use "/src/app/styles/variabels/mixins.scss";
+
+.link {
+  @include mixins.link();
+}

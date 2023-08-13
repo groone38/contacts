@@ -1,0 +1,28 @@
+@import "./vars.scss";
+
+@mixin link() {
+  color: var(--color-text);
+  padding: 10px;
+  transition: ease-in-out 0.5s;
+  border-bottom: $border;
+  &:hover {
+    box-shadow: 0 0 15px var(--color-shadow);
+  }
+}
+
+@mixin form() {
+  border-right: $border;
+  border-left: $border;
+  padding: 10px 40px 40px;
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 30px;
+  }
+}

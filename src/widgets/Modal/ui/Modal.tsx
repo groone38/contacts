@@ -6,7 +6,7 @@ import Close from "../../../shared/img/Close.svg";
 
 interface ModalProps {
   show: boolean;
-  setShow: (x: boolean) => void;
+  setShow: (value: boolean) => void;
 }
 
 const root = document.getElementById("react-modals")!;
