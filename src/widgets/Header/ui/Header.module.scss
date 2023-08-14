@@ -1,40 +1,45 @@
-@import "/src/app/styles/variabels/vars.scss";
+@import "/src/app/styles/variabels/vars";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  color: var(--color-text);
-  .logo {
-    color: var(--color-text-hover);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	color: var(--color-text);
 
-    @media ($mobile) {
-      display: none;
-    }
-  }
-  @media ($mobile) {
-    justify-content: end;
-    background-color: var(--color-border);
-  }
+	.logo {
+		color: var(--color-text-hover);
+
+		@media ($mobile) {
+			display: none;
+		}
+	}
+
+	@media ($mobile) {
+		justify-content: end;
+		background-color: var(--color-border);
+	}
 }
 
 .nav {
-  ul {
-    display: flex;
-    align-items: center;
-    li {
-      padding: 20px;
-      transition: all 0.5s;
-      list-style-type: none;
-      cursor: pointer;
-      &:hover {
-        box-shadow: 0 0 15px var(--color-shadow);
-        color: var(--color-text-hover);
-      }
-    }
-  }
-  @media ($mobile) {
-    display: none;
-  }
+	ul {
+		display: flex;
+		align-items: center;
+
+		li {
+			list-style-type: none;
+			padding: 20px;
+			transition: all 0.5s;
+			cursor: pointer;
+
+			&:hover {
+				box-shadow: 0 0 15px var(--color-shadow);
+				color: var(--color-text-hover);
+			}
+		}
+	}
+
+	@media ($mobile) {
+		display: none;
+	}
 }

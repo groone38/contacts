@@ -1,24 +1,26 @@
 .input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  label {
-    display: block;
-    color: var(--color-label);
-  }
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
 
-  input {
-    border: none;
-    border-bottom: 1px solid var(--color-border);
-    padding: 10px 0;
-    color: var(--color-text);
-    &:focus {
-      outline: none;
-    }
-  }
+	label {
+		display: block;
+		color: var(--color-label);
+	}
 
-  span {
-    margin-top: 10px;
-    color: var(--color-error) !important;
-  }
+	input {
+		border: none;
+		border-bottom: 1px solid var(--color-border);
+		padding: 10px 0;
+		color: var(--color-text);
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	span {
+		margin-top: 10px;
+		color: var(--color-error) !important;
+	}
 }

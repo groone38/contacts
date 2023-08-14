@@ -1,15 +1,15 @@
 @use "/src/app/styles/variabels/mixins.scss";
 
 .wrap {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
 
-  .form {
-    @include mixins.form();
-  }
+	.form {
+		@include mixins.form;
+	}
 }

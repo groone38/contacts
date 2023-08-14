@@ -24,7 +24,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{ts,tsx}\"",
-    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
   "browserslist": {
     "production": [
@@ -48,6 +50,9 @@
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "redux": "^4.2.1",
-    "sass": "^1.64.1"
+    "sass": "^1.64.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3"
   }
 }
