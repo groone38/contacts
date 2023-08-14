@@ -5,9 +5,11 @@ import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { signInUser } from "src/features/model/reducers/AuthSlice";
 import { useNavigate } from "react-router-dom";
 import { Loader } from "src/shared/ui/Loader";
-import classes from "./Login.module.scss";
+
 import { Button } from "src/shared/ui/Button";
 import { LinkButton } from "src/features/ui/LinkButton";
+
+import classes from "./Login.module.scss";
 interface LoginData {
   email: string;
   password: string;

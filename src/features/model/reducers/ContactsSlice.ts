@@ -54,7 +54,7 @@ export const createContact = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Error create contact!(");
     }
-  }
+  },
 );
 
 export const getContact = createAsyncThunk(
@@ -70,7 +70,7 @@ export const getContact = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Error get contacts!");
     }
-  }
+  },
 );
 
 export const getOneContact = createAsyncThunk(
@@ -83,7 +83,7 @@ export const getOneContact = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Error get contact!");
     }
-  }
+  },
 );
 
 export const updateContact = createAsyncThunk(
@@ -96,7 +96,7 @@ export const updateContact = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Error update contact!");
     }
-  }
+  },
 );
 
 export const deleteContact = createAsyncThunk(
@@ -108,7 +108,7 @@ export const deleteContact = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Error delete contact!");
     }
-  }
+  },
 );
 
 export const contactsSlice = createSlice({

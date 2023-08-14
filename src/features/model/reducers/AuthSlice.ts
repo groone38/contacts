@@ -34,11 +34,10 @@ export const signInUser = createAsyncThunk(
   async (data: Data, thunkAPI) => {
     try {
       const auth = getAuth();
-      console.log(auth);
       const response: User = await signInWithEmailAndPassword(
         auth,
         data.email,
-        data.password
+        data.password,
       ).then((userCredential) => userCredential.user);
       const token = await response.getIdToken().then((res) => res);
       localStorage.setItem("token", token);
@@ -46,7 +45,7 @@ export const signInUser = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue("Failed to sign in!(");
     }
-  }
+  },
 );
 
 export const registerUser = createAsyncThunk(
@@ -57,13 +56,13 @@ export const registerUser = createAsyncThunk(
       const response: User = await createUserWithEmailAndPassword(
         auth,
         data.email,
-        data.password
+        data.password,
       ).then((userCredential) => userCredential.user);
       return response;
     } catch (error) {
       return thunkAPI.rejectWithValue("Failed to register!(");
     }
-  }
+  },
 );
 
 export const authSlice = createSlice({
@@ -78,7 +77,7 @@ export const authSlice = createSlice({
       registerUser.fulfilled,
       (state, action: PayloadAction<User>) => {
         state.loading = false;
-      }
+      },
     );
     builder.addCase(registerUser.rejected, (state, action) => {
       state.loading = false;
@@ -94,7 +93,7 @@ export const authSlice = createSlice({
         state.email = action.payload.email;
         state.id = action.payload.uid;
         state.error = "";
-      }
+      },
     );
     builder.addCase(signInUser.rejected, (state, action) => {
       state.loading = false;

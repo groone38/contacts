@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "src/app/providers";
+
 import { Layout } from "./Layout";
 import { Register } from "./Register";
 import { Contact } from "./Contact";

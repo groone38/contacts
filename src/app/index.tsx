@@ -1,7 +1,9 @@
 import React from "react";
+
 import "./index.scss";
-import { withProviders } from "./providers";
 import { Routing } from "src/pages";
+
+import { withProviders } from "./providers";
 
 function App() {
   return (

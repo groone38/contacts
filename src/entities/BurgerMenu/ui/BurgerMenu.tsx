@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FaAlignJustify } from "react-icons/fa6";
-import classes from "./BurgerMenu.module.scss";
+
 import { Link } from "react-router-dom";
+
+import classes from "./BurgerMenu.module.scss";
 
 interface BurgerMenuProps {
   create: () => void;

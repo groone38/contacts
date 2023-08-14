@@ -1,7 +1,8 @@
 import React from "react";
 import { Input } from "src/shared/Input";
+
 import classes from "./ContactField.module.scss";
-interface ContactField {
+interface ContactFieldProps {
   edit: boolean;
   type: string;
   id: string;
@@ -25,7 +26,7 @@ const ContactField = ({
   label,
   errors,
   data,
-}: ContactField) => {
+}: ContactFieldProps) => {
   if (edit)
     return (
       <Input

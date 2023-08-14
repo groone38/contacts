@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import classes from "./Modal.module.scss";
+
 import { ModalForm } from "src/widgets/ModalForm";
 import { FaX } from "react-icons/fa6";
+
+import classes from "./Modal.module.scss";
 
 interface ModalProps {
   show: boolean;
@@ -21,7 +23,7 @@ const Modal = ({ show, setShow }: ModalProps) => {
       </button>
       <ModalForm setShow={setShow} />
     </div>,
-    root
+    root,
   );
 };
 

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import classes from "./Header.module.scss";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "src/widgets/Modal";
 import { LinkButton } from "src/features/ui/LinkButton";
 import { BurgerMenu } from "src/entities/BurgerMenu";
+
+import classes from "./Header.module.scss";
 
 const Header = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -12,7 +13,6 @@ const Header = () => {
     localStorage.removeItem("token");
     navigate("/login");
   };
-
   return (
     <header className={classes.header}>
       <div className={classes.logo}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import classes from "./Contact.module.scss";
+
 import { useNavigate, useParams } from "react-router-dom";
 import {
   deleteContact,
@@ -13,6 +13,8 @@ import { Button } from "src/shared/ui/Button";
 import { ContactField } from "src/entities/ContactField";
 import { Loader } from "src/shared/ui/Loader";
 
+import classes from "./Contact.module.scss";
+
 interface ModalFormData {
   email: string;
   first_name: string;
@@ -25,7 +27,7 @@ interface ModalFormData {
 const Contact = () => {
   const [edit, setEdit] = useState<boolean>(false);
   const data = useAppSelector(
-    (state) => state.contacts.contact
+    (state) => state.contacts.contact,
   ) as ModalFormData;
   const loading = useAppSelector((state) => state.contacts.loading);
 

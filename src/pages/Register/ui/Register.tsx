@@ -5,9 +5,11 @@ import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { registerUser } from "src/features/model/reducers/AuthSlice";
 import { Input } from "src/shared/Input";
 import { Loader } from "src/shared/ui/Loader";
-import classes from "./Register.module.scss";
+
 import { Button } from "src/shared/ui/Button";
 import { LinkButton } from "src/features/ui/LinkButton";
+
+import classes from "./Register.module.scss";
 interface RegisterData {
   email: string;
   password: string;

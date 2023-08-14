@@ -1,6 +1,8 @@
 import React from "react";
-import classes from "./Contact.module.scss";
+
 import { Link } from "react-router-dom";
+
+import classes from "./Contact.module.scss";
 
 interface ContactProps {
   id: string;

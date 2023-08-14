@@ -1,6 +1,6 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import classes from "./ModalForm.module.scss";
+
 import { Input } from "src/shared/Input";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import {
@@ -9,6 +9,8 @@ import {
 } from "src/features/model/reducers/ContactsSlice";
 import { Loader } from "src/shared/ui/Loader";
 import { Button } from "src/shared/ui/Button";
+
+import classes from "./ModalForm.module.scss";
 
 interface ModalFormData {
   email: string;

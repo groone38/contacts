@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { getContact } from "src/features/model/reducers/ContactsSlice";
 import Contact from "src/entities/Contact/ui/Contact";
-import classes from "./Home.module.scss";
+
 import { Loader } from "src/shared/ui/Loader";
 import { Search } from "src/features/ui/Search";
+
+import classes from "./Home.module.scss";
 
 const Home = () => {
   const [search, setSearch] = useState<string>("");
