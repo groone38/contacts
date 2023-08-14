@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "src/shared/Input";
-
+import classes from "./ContactField.module.scss";
 interface ContactField {
   edit: boolean;
   type: string;
@@ -26,25 +26,23 @@ const ContactField = ({
   errors,
   data,
 }: ContactField) => {
+  if (edit)
+    return (
+      <Input
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        register={register}
+        required={required}
+        type={type}
+        label={label}
+        errors={errors}
+      />
+    );
   return (
-    <div>
-      {edit ? (
-        <Input
-          id={id}
-          name={name}
-          placeholder={placeholder}
-          register={register}
-          required={required}
-          type={type}
-          label={label}
-          errors={errors}
-        />
-      ) : (
-        <>
-          <strong>{label}: </strong>
-          <span>{data}</span>
-        </>
-      )}
+    <div className={classes.info}>
+      <strong>{label}: </strong>
+      <span>{data}</span>
     </div>
   );
 };

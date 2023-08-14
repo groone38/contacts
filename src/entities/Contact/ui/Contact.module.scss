@@ -1,15 +1,15 @@
+@import "/src/app/styles/variabels/vars.scss";
+
 .contact {
   display: inline-block;
   padding: 10px;
-  border: 1px solid var(--bg-primary-color);
+  border: $border;
   border-radius: 20px;
   transition: ease-in-out 0.5s;
   cursor: pointer;
-  color: var(--bg-primary-color);
+  color: var(--color-text);
   &:hover {
-    background-color: var(--bg-primary-color);
-    color: var(--text-primary-color);
     transform: translate(-10px, 10px);
-    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px -15px 10px 5px var(--color-shadow);
   }
 }

@@ -1,12 +1,21 @@
+@import "/src/app/styles/variabels/vars.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  background-color: var(--bg-primary-color);
-  color: var(--text-primary-color);
-  a {
-    color: var(--text-primary-color);
+  padding: 10px 20px;
+  color: var(--color-text);
+  .logo {
+    color: var(--color-text-hover);
+
+    @media ($mobile) {
+      display: none;
+    }
+  }
+  @media ($mobile) {
+    justify-content: end;
+    background-color: var(--color-border);
   }
 }
 
@@ -20,9 +29,12 @@
       list-style-type: none;
       cursor: pointer;
       &:hover {
-        background-color: white;
-        color: var(--bg-primary-color);
+        box-shadow: 0 0 15px var(--color-shadow);
+        color: var(--color-text-hover);
       }
     }
+  }
+  @media ($mobile) {
+    display: none;
   }
 }

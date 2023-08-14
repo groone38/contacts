@@ -1,0 +1,46 @@
+@import "/src/app/styles/variabels/vars.scss";
+.burger {
+  display: none;
+  svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  @media ($mobile) {
+    display: block;
+  }
+}
+
+.menu {
+  position: fixed;
+  padding-left: 20px;
+  top: 44px;
+  left: 0;
+  color: white;
+  width: 100%;
+  background-color: var(--color-border);
+  overflow: hidden;
+  z-index: 1;
+  transition: ease-in-out 0.5s;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  li {
+    width: max-content;
+    cursor: pointer;
+  }
+  a {
+    color: white;
+  }
+}
+
+.open {
+  height: 13%;
+}
+
+.close {
+  height: 0px;
+}

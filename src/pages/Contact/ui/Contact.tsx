@@ -7,10 +7,8 @@ import {
   updateContact,
 } from "src/features/model/reducers/ContactsSlice";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
-import Delete from "../../../shared/img/delete.svg";
-import Edit from "../../../shared/img/edit.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { FaCheck } from "react-icons/fa6";
+import { FaCheck, FaTrashCan, FaPencil, FaX } from "react-icons/fa6";
 import { Button } from "src/shared/ui/Button";
 import { ContactField } from "src/entities/ContactField";
 import { Loader } from "src/shared/ui/Loader";
@@ -168,12 +166,12 @@ const Contact = () => {
                   <FaCheck fill="white" />
                 </Button>
                 <Button onclick={remove} type="button">
-                  <img src={Delete} alt="delete" />
+                  <FaTrashCan />
                 </Button>
               </>
             )}
             <Button onclick={editHandler} type="button">
-              <img src={Edit} alt="edit" />
+              {edit ? <FaX /> : <FaPencil />}
             </Button>
           </div>
         </form>

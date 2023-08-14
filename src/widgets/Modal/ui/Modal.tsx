@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.scss";
 import { ModalForm } from "src/entities/ModalForm";
-import Close from "../../../shared/img/Close.svg";
+import { FaX } from "react-icons/fa6";
 
 interface ModalProps {
   show: boolean;
@@ -15,9 +15,9 @@ const Modal = ({ show, setShow }: ModalProps) => {
   if (!show) return null;
   return ReactDOM.createPortal(
     <div className={classes.modal}>
-      <div className={classes.overlay}></div>
+      <div className={classes.overlay} onClick={() => setShow(false)}></div>
       <button onClick={() => setShow(false)} className={classes.close_btn}>
-        <img src={Close} alt="close" />
+        <FaX />
       </button>
       <ModalForm setShow={setShow} />
     </div>,

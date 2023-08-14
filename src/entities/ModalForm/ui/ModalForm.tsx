@@ -8,6 +8,7 @@ import {
   getContact,
 } from "src/features/model/reducers/ContactsSlice";
 import { Loader } from "src/shared/ui/Loader";
+import { Button } from "src/shared/ui/Button";
 
 interface ModalFormData {
   email: string;
@@ -118,7 +119,7 @@ const ModalForm = ({ setShow }: ModalFormProps) => {
           errors={errors?.about?.message}
         />
 
-        <button type="submit">Create contact</button>
+        <Button type="submit">Create contact</Button>
       </form>
     </>
   );

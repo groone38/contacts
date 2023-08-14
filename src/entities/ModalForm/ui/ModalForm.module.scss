@@ -1,3 +1,8 @@
+@use "/src/app/styles/variabels/mixins.scss";
 .form {
+  @include mixins.form();
+  background-color: white;
+  width: 50%;
+  border-radius: 20px;
   z-index: 2;
 }
