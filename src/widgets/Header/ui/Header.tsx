@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Header.module.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Modal } from "src/widgets/Modal";
 import { LinkButton } from "src/features/ui/LinkButton";
 import { BurgerMenu } from "src/entities/BurgerMenu";

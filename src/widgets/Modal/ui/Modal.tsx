@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.scss";
-import { ModalForm } from "src/entities/ModalForm";
+import { ModalForm } from "src/widgets/ModalForm";
 import { FaX } from "react-icons/fa6";
 
 interface ModalProps {

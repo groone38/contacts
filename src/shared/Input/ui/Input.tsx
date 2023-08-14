@@ -5,10 +5,10 @@ interface InputProps {
   id: string;
   name: string;
   placeholder: string;
-  register: any;
-  required: string;
-  label: string;
-  errors: string | undefined;
+  register?: any;
+  required?: string;
+  label?: string;
+  errors?: string | undefined;
 }
 
 const Input = ({

@@ -12,7 +12,7 @@
 @mixin form() {
   border-right: $border;
   border-left: $border;
-  padding: 10px 40px 40px;
+  padding: 20px 40px 40px;
   &__btn {
     display: flex;
     align-items: center;

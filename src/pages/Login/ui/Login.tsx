@@ -1,6 +1,4 @@
 import React from "react";
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "src/shared/Input";
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
