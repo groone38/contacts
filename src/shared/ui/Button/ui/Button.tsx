@@ -8,7 +8,12 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 
 const Button = ({ children, onclick, type }: ButtonProps) => {
   return (
-    <button type={type} onClick={onclick} className={classes.btn}>
+    <button
+      type={type}
+      onClick={onclick}
+      className={classes.btn}
+      data-testid="btn"
+    >
       {children}
     </button>
   );

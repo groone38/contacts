@@ -38,7 +38,9 @@ const Login = () => {
     <div className={classes.wrap}>
       {loading && <Loader />}
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <h2 className={classes.form__title}>Sing in</h2>
+        <h2 className={classes.form__title} data-testid="title">
+          Sing in
+        </h2>
         <Input
           id="email"
           name="email"

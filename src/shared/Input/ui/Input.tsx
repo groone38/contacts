@@ -33,7 +33,7 @@ const Input = ({
           required: required,
         })}
       />
-      {errors && <span>{errors}</span>}
+      {errors && <span data-testid="message">{errors}</span>}
     </div>
   );
 };
