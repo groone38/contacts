@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+<h1 align='center'>Contacts in company</h1>
+<p align='center'>
+<img src='./src/shared/img/geo.jpg' alt='logo' width='100px'>
+</p>
+<p align='center'>
+<img alt="Static Badge" src="https://img.shields.io/badge/npm-9.5.1.0-green">
+<img alt="Static Badge" src="https://img.shields.io/badge/nodeJS-18.16.0-blue">
+<img alt="Static Badge" src="https://img.shields.io/badge/react-18.2.0-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/react_redux-8.1.1-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/sass-1.64.1-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/react_hook_form-7.45.2-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/axios-1.4.0-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/react_router_dom-6.14.2-lightred">
+<img alt="Static Badge" src="https://img.shields.io/badge/product_version-1.0-violet">
+<img alt="Static Badge" src="https://img.shields.io/badge/firebase-10.1.0-aqua">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+<p>
+    Проект для списка сотрудников в компании, с функционалом добавления, редактирования, удаления сотрудников, авторизацией/регистрацией, приватным роутингом.
+</p>
 
-### `npm start`
+## Project setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install
+npm run start
+npm run test
+npm run lint:fix
+npm run lint:scss:fix
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usege
 
-### `npm test`
+Для архитектуры проекта была использованна методология Feature-Sliced Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src='https://cdn-icons-png.flaticon.com/512/732/732212.png' alt='html' width='50px'>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png' alt='sass' width='50px'>
+<img src='https://cdn-icons-png.flaticon.com/512/5968/5968381.png' width='50px' alt='typescript'>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png' alt='react' width='50px'>
+<img src='https://repository-images.githubusercontent.com/347723622/92065800-865a-11eb-9626-dff3cb7fef55' alt='redux-toolkit' width='50px'>
+<img src='https://static-00.iconduck.com/assets.00/react-router-icon-512x279-zswz065s.png' alt='react-router-dom' width='50px'>
+<img src='https://testing-library.com/img/octopus-128x128.png' alt='react testing library' width='50px'>
+<img src='https://cdn.icon-icons.com/icons2/691/PNG/512/google_firebase_icon-icons.com_61474.png' alt='firebase' width='50px'>
+<img src='https://www.svgrepo.com/show/354405/stylelint.svg' alt='stylelint' width='50px'>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/1200px-ESLint_logo.svg.png' width='50px' alt='eslint'>
+<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KlEIZoTOWXCd4wVB7uW9VSxt0ypX7IpWXwm8wFbCJutHyuHRT8fIWTH0xciEXHNuC1s&usqp=CAU' alt='fsd' width='50px'>
