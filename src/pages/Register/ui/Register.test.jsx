@@ -1,21 +1,21 @@
 import { act, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Login from "./Login";
-import { Provider } from "react-redux";
-import { store } from "../../../app/providers/store/index";
+import Register from "./Register";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "src/app/providers/store";
+import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 
 const page = (
   <BrowserRouter>
     <Provider store={store}>
-      <Login />
+      <Register />
     </Provider>
   </BrowserRouter>
 );
 
-describe("Login", () => {
-  it("render component", async () => {
+describe("Register component", () => {
+  it("render component", () => {
     render(page);
     expect(screen.getByTestId("title")).toBeInTheDocument();
   });
@@ -58,7 +58,6 @@ describe("Login", () => {
     await act(() => {
       userEvent.click(getByTestId("btn"));
     });
-
     expect(
       screen.getByText("Поле Email не может быть пустым!")
     ).toBeInTheDocument();
@@ -81,8 +80,8 @@ describe("Login", () => {
       screen.queryByText("Поле Password не может быть пустым!")
     ).toBeNull();
   });
-  it("Login snapchot", () => {
-    const login = render(page);
-    expect(login).toMatchSnapshot();
+  it("Register snapchot", () => {
+    const register = render(page);
+    expect(register).toMatchSnapshot();
   });
 });

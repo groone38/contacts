@@ -47,7 +47,9 @@ const Register = () => {
     <div className={classes.wrap}>
       {loading && <Loader />}
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <h2 className={classes.form__title}>Sing up</h2>
+        <h2 className={classes.form__title} data-testid="title">
+          Sing up
+        </h2>
         <Input
           id="email"
           name="email"
