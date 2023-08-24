@@ -1,5 +1,302 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Contact component contact snapchot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="overlay"
+      >
+        <div
+          class="lds_spinner"
+        >
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      </div>
+      <div
+        class="contact"
+      >
+        <form
+          class="contact__block"
+        >
+          <div
+            class="info"
+          >
+            <strong>
+              First name
+              : 
+            </strong>
+            <span>
+              Andrey
+            </span>
+          </div>
+          <div
+            class="info"
+          >
+            <strong>
+              Last name
+              : 
+            </strong>
+            <span>
+              Lisin
+            </span>
+          </div>
+          <div
+            class="info"
+          >
+            <strong>
+              Email
+              : 
+            </strong>
+            <span>
+              groone38@yandex.ru
+            </span>
+          </div>
+          <div
+            class="info"
+          >
+            <strong>
+              Company
+              : 
+            </strong>
+            <span>
+              LisDev
+            </span>
+          </div>
+          <div
+            class="info"
+          >
+            <strong>
+              Tel
+              : 
+            </strong>
+            <span>
+              89054437359
+            </span>
+          </div>
+          <div
+            class="info"
+          >
+            <strong>
+              About
+              : 
+            </strong>
+            <span>
+              Frontend dev
+            </span>
+          </div>
+          <div
+            class="contact__btn"
+          >
+            <button
+              class="btn"
+              data-testid="btn"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="overlay"
+    >
+      <div
+        class="lds_spinner"
+      >
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
+    </div>
+    <div
+      class="contact"
+    >
+      <form
+        class="contact__block"
+      >
+        <div
+          class="info"
+        >
+          <strong>
+            First name
+            : 
+          </strong>
+          <span>
+            Andrey
+          </span>
+        </div>
+        <div
+          class="info"
+        >
+          <strong>
+            Last name
+            : 
+          </strong>
+          <span>
+            Lisin
+          </span>
+        </div>
+        <div
+          class="info"
+        >
+          <strong>
+            Email
+            : 
+          </strong>
+          <span>
+            groone38@yandex.ru
+          </span>
+        </div>
+        <div
+          class="info"
+        >
+          <strong>
+            Company
+            : 
+          </strong>
+          <span>
+            LisDev
+          </span>
+        </div>
+        <div
+          class="info"
+        >
+          <strong>
+            Tel
+            : 
+          </strong>
+          <span>
+            89054437359
+          </span>
+        </div>
+        <div
+          class="info"
+        >
+          <strong>
+            About
+            : 
+          </strong>
+          <span>
+            Frontend dev
+          </span>
+        </div>
+        <div
+          class="contact__btn"
+        >
+          <button
+            class="btn"
+            data-testid="btn"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"
+              />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Contact component render 1`] = `
 Object {
   "asFragment": [Function],

@@ -40,4 +40,14 @@ describe("Contact component", () => {
 
     expect(screen.getByText("Frontend dev")).toBeInTheDocument();
   });
+  it("contact snapchot", () => {
+    mockDispatch.mockReturnValue(jest.fn());
+    mockSelector.mockReturnValue(user);
+    const contact = render(
+      <BrowserRouter>
+        <Contact />
+      </BrowserRouter>
+    );
+    expect(contact).toMatchSnapshot();
+  });
 });
