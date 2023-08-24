@@ -35,6 +35,7 @@ npm run lint:scss:fix
 ## Usege
 
 Для архитектуры проекта была использованна методология Feature-Sliced Design
+
 <div>
 <img src='https://cdn-icons-png.flaticon.com/512/732/732212.png' alt='html' width='50px'>
 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png' alt='sass' width='50px'>
@@ -48,3 +49,16 @@ npm run lint:scss:fix
 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/1200px-ESLint_logo.svg.png' width='50px' alt='eslint'>
 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KlEIZoTOWXCd4wVB7uW9VSxt0ypX7IpWXwm8wFbCJutHyuHRT8fIWTH0xciEXHNuC1s&usqp=CAU' alt='fsd' width='50px'>
 </div>
+
+## Link project
+
+Project - https://contacts-fc906.web.app/
+
+### My contact
+
+<a href="https://www.linkedin.com/in/andrey-lisin-5323a7239/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+</a>
+<a href="https://t.me/lisichkinlove">
+    <img src="https://img.shields.io/badge/telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge"/>
+</a>
