@@ -2,9 +2,10 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
-import { store } from "../../../app/providers/store/index";
-import { Input } from "src/shared/Input";
+import { store } from "../../../../app/providers/store/index";
+
 import "@testing-library/jest-dom";
+import Input from "./Input";
 const register = jest.fn();
 
 describe("Input component", () => {
@@ -36,8 +37,5 @@ describe("Input component", () => {
       />
     );
     await userEvent.type(screen.getByLabelText(/Email/i), "groone38@yandex.ru");
-
-    // userEvent.type(screen.getByRole("textbox"), "React");
-    // expect(onChange).toHaveBeenCalledTimes(5);
   });
 });

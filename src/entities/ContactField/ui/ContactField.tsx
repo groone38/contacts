@@ -1,5 +1,6 @@
 import React from "react";
-import { Input } from "src/shared/Input";
+
+import { Input } from "src/shared/ui/Input";
 
 import classes from "./ContactField.module.scss";
 interface ContactFieldProps {

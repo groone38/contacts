@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Input } from "src/shared/Input";
+
 import { useAppDispatch, useAppSelector } from "src/app/providers/store";
 import { signInUser } from "src/features/model/reducers/AuthSlice";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,8 @@ import { Loader } from "src/shared/ui/Loader";
 
 import { Button } from "src/shared/ui/Button";
 import { LinkButton } from "src/features/ui/LinkButton";
+
+import { Input } from "src/shared/ui/Input";
 
 import classes from "./Login.module.scss";
 interface LoginData {
